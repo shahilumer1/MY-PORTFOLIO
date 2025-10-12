@@ -1,0 +1,46 @@
+My Personal Portfolio Website
+This repository contains the source code for my personal portfolio website. It's a modern, fully responsive, single-page application designed to showcase my skills, projects, and professional experience to potential employers and collaborators.
+
+✨ View the Live Demo ✨
+(Don't forget to replace the link above with your actual Vercel, Netlify, or GitHub Pages URL!)
+
+(Tip: Take a screenshot of your finished portfolio, name it screenshot.png, and add it to your project folder for the image to appear here.)
+
+🚀 Features
+Sleek & Modern UI: Clean, minimalist design with a dark theme.
+
+Fully Responsive: Looks great on all devices, from mobile phones to desktop screens.
+
+Interactive Animations:
+
+Dynamic particle background using tsParticles.
+
+Engaging typing effect in the hero section.
+
+Subtle on-scroll animations to reveal content.
+
+Key Sections: Includes dedicated sections for About Me, Technical Skills, Projects, and an embedded Resume summary.
+
+Easy Contact: A direct mailto: link in the contact section makes it easy for visitors to get in touch.
+
+🛠️ Technologies Used
+This project was built using a simple and efficient tech stack:
+
+HTML5: For the structure and content of the website.
+
+Tailwind CSS: For all styling and creating a responsive layout without writing custom CSS.
+
+JavaScript (ES6+): To power the interactive elements like the typing effect and the particle animation.
+
+🔧 How to Run Locally
+To run this project on your local machine:
+
+Clone the repository:
+
+git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
+
+Navigate to the project directory:
+
+cd your-repo-name
+
+Open the index.html file in your web browser. For the best experience, I recommend using the Live Server extension in Visual Studio Code.

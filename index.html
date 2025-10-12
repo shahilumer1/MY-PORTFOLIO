@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale-1.0">
+    <title>Ummar Farook Shahil | Portfolio</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- tsParticles for animated background -->
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111827; /* Dark background */
+            color: #E5E7EB; /* Light text */
+        }
+        .glass-effect {
+            background: rgba(31, 41, 55, 0.5); /* Semi-transparent dark gray */
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .accent-color {
+            color: #38bdf8; /* Sky Blue */
+        }
+        .accent-bg {
+            background-color: #38bdf8;
+        }
+        .accent-border {
+            border-color: #38bdf8;
+        }
+
+        /* Styling for the typing effect cursor */
+        .typing-effect::after {
+            content: '|';
+            animation: blink 1s step-end infinite;
+        }
+
+        @keyframes blink {
+            from, to { color: transparent }
+            50% { color: #38bdf8; }
+        }
+
+        /* Styles for scroll animations */
+        .scroll-animate {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .scroll-animate.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        #tsparticles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center glass-effect rounded-b-xl">
+            <a href="#" class="text-2xl font-bold tracking-wider">My Portfolio</a>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#about" class="hover:text-sky-400 transition-colors duration-300">About</a>
+                <a href="#skills" class="hover:text-sky-400 transition-colors duration-300">Skills</a>
+                <a href="#projects" class="hover:text-sky-400 transition-colors duration-300">Projects</a>
+                <a href="#resume" class="hover:text-sky-400 transition-colors duration-300">Resume</a>
+                <a href="#contact" class="hover:text-sky-400 transition-colors duration-300">Contact</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-gray-300 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden glass-effect">
+            <a href="#about" class="block text-center py-2 px-4 hover:bg-gray-700">About</a>
+            <a href="#skills" class="block text-center py-2 px-4 hover:bg-gray-700">Skills</a>
+            <a href="#projects" class="block text-center py-2 px-4 hover:bg-gray-700">Projects</a>
+             <a href="#resume" class="block text-center py-2 px-4 hover:bg-gray-700">Resume</a>
+            <a href="#contact" class="block text-center py-2 px-4 hover:bg-gray-700">Contact</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 pt-24">
+
+        <!-- Hero Section -->
+        <section id="home" class="relative text-center py-20 md:py-32 overflow-hidden">
+            <div id="tsparticles"></div>
+            <div class="hero-content">
+                <h1 class="text-4xl md:text-6xl font-bold tracking-tight">
+                    Hi, I'm <span class="accent-color typing-effect" id="typing-name"></span>
+                </h1>
+                <p class="mt-4 text-lg md:text-xl text-gray-300 max-w-3xl mx-auto scroll-animate">
+                    A dedicated and proactive final-year B.Tech student specializing in Artificial Intelligence and Machine Learning.
+                </p>
+                <div class="mt-8 flex justify-center items-center gap-6 scroll-animate">
+                    <a href="https://github.com/shahilumer1" target="_blank" class="text-gray-400 hover:text-white transform hover:scale-110 transition-transform duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                    </a>
+                     <a href="https://www.linkedin.com/in/ummar-farook-shahil01b23427b" target="_blank" class="text-gray-400 hover:text-white transform hover:scale-110 transition-transform duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                    </a>
+                    <a href="https://www.instagram.com/__shahil._/" target="_blank" class="text-gray-400 hover:text-white transform hover:scale-110 transition-transform duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                    </a>
+                     <a href="mailto:ummerfarookshahil123@gmail.com" class="text-gray-400 hover:text-white transform hover:scale-110 transition-transform duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="py-20 scroll-animate">
+            <h2 class="text-3xl font-bold text-center mb-12">About Me</h2>
+            <div class="flex flex-col md:flex-row items-center gap-10 md:gap-16">
+                <div class="w-48 h-48 md:w-64 md:h-64 flex-shrink-0">
+                    <!-- The 'src' should match your image file name. The 'object-top' class helps position your face correctly. -->
+                    <img src="abt copy.jpg" alt="Ummar Farook Shahil" class="rounded-full border-4 border-sky-500 object-cover object-top w-full h-full shadow-lg">
+                </div>
+                <div class="text-center md:text-left max-w-2xl">
+                    <p class="text-gray-300 mb-4">
+                        Hello! I'm a final-year student at PA College of Engineering, Mangaluru, pursuing a B.Tech in Artificial Intelligence and Machine Learning with a current CGPA of 8.2. I'm passionate about developing innovative solutions and have hands-on experience in Python, Java, TensorFlow, and Flask. 
+                    </p>
+                    <p class="text-gray-300">
+                        My journey in tech is driven by a desire to solve real-world problems, which has led me to work on exciting projects, participate in hackathons, and earn certifications from institutions like Harvard and Stanford. I am always eager to learn and collaborate with creative minds to build impactful technology.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-20 scroll-animate">
+            <h2 class="text-3xl font-bold text-center mb-12">Technical Skills</h2>
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold text-sky-400 mb-4">Programming Languages</h3>
+                    <div class="flex flex-wrap justify-center gap-3">
+                        <span class="bg-gray-800 text-gray-300 text-sm font-medium px-4 py-2 rounded-lg">Python</span>
+                        <span class="bg-gray-800 text-gray-300 text-sm font-medium px-4 py-2 rounded-lg">Java</span>
+                        <span class="bg-gray-800 text-gray-300 text-sm font-medium px-4 py-2 rounded-lg">C</span>
+                        <span class="bg-gray-800 text-gray-300 text-sm font-medium px-4 py-2 rounded-lg">HTML/CSS</span>
+                        <span class="bg-gray-800 text-gray-300 text-sm font-medium px-4 py-2 rounded-lg">Data Analysis</span>
+                        <span class="bg-gray-800 text-gray-300 text-sm font-medium px-4 py-2 rounded-lg">MongoDB</span>
+                    </div>
+                </div>
+                 <div class="mb-8">
+                    <h3 class="text-xl font-semibold text-sky-400 mb-4">Frameworks</h3>
+                    <div class="flex flex-wrap justify-center gap-3">
+                        <span class="bg-gray-800 text-gray-300 text-sm font-medium px-4 py-2 rounded-lg">TensorFlow</span>
+                        <span class="bg-gray-800 text-gray-300 text-sm font-medium px-4 py-2 rounded-lg">PyTorch</span>
+                        <span class="bg-gray-800 text-gray-300 text-sm font-medium px-4 py-2 rounded-lg">Flask</span>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-sky-400 mb-4">Libraries & Tools</h3>
+                     <div class="flex flex-wrap justify-center gap-3">
+                        <span class="bg-gray-800 text-gray-300 text-sm font-medium px-4 py-2 rounded-lg">NumPy</span>
+                        <span class="bg-gray-800 text-gray-300 text-sm font-medium px-4 py-2 rounded-lg">Pandas</span>
+                        <span class="bg-gray-800 text-gray-300 text-sm font-medium px-4 py-2 rounded-lg">Scikit-learn</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 scroll-animate">
+            <h2 class="text-3xl font-bold text-center mb-12">My Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Project Card 1 -->
+                <div class="glass-effect rounded-xl overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300 flex flex-col">
+                    <img src="https://placehold.co/600x400/1f2937/e5e7eb?text=Smart+Plant+Care" alt="Smart Plant Indoor Care System" class="w-full h-48 object-cover">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-semibold mb-2">Smart Plant Indoor Care System</h3>
+                        <p class="text-gray-400 mb-4 text-sm">An IoT and ML-based system to monitor and maintain optimal conditions for indoor plants with automated watering and SMS alerts.</p>
+                        <div class="flex flex-wrap gap-2 mb-4 mt-auto">
+                            <span class="bg-sky-900 text-sky-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">IoT</span>
+                            <span class="bg-sky-900 text-sky-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Machine Learning</span>
+                            <span class="bg-sky-900 text-sky-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Python</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="glass-effect rounded-xl overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300 flex flex-col">
+                    <img src="https://placehold.co/600x400/1f2937/e5e7eb?text=Stock+Prediction" alt="AI Stock Market Predictor" class="w-full h-48 object-cover">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-semibold mb-2">AI Stock Market Predictor</h3>
+                        <p class="text-gray-400 mb-4 text-sm">An AI-driven system using LSTM neural networks to forecast stock prices, achieving 85% prediction accuracy during a hackathon.</p>
+                        <div class="flex flex-wrap gap-2 mb-4 mt-auto">
+                           <span class="bg-sky-900 text-sky-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">AI</span>
+                           <span class="bg-sky-900 text-sky-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">TensorFlow</span>
+                           <span class="bg-sky-900 text-sky-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">LSTM</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="glass-effect rounded-xl overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300 flex flex-col">
+                    <img src="https://placehold.co/600x400/1f2937/e5e7eb?text=Speech-To-Text" alt="Speech-To-Text Using Whisper" class="w-full h-48 object-cover">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-semibold mb-2">Speech-To-Text Using Whisper</h3>
+                        <p class="text-gray-400 mb-4 text-sm">An NLP system to convert audio to text using OpenAI’s Whisper model, featuring a web interface for real-time transcription.</p>
+                        <div class="flex flex-wrap gap-2 mb-4 mt-auto">
+                            <span class="bg-sky-900 text-sky-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Python</span>
+                            <span class="bg-sky-900 text-sky-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Flask</span>
+                            <span class="bg-sky-900 text-sky-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Resume Section -->
+        <section id="resume" class="py-20 scroll-animate">
+            <h2 class="text-3xl font-bold text-center mb-12">My Resume</h2>
+            <div class="max-w-4xl mx-auto glass-effect rounded-xl p-8 md:p-12">
+                
+                <!-- Education -->
+                <div class="mb-8">
+                    <h3 class="text-2xl font-semibold text-sky-400 mb-4">Education</h3>
+                    <div class="mb-4">
+                        <p class="text-lg font-bold">PA College of Engineering, Mangalore</p>
+                        <p class="text-gray-400">B.E. in Artificial Intelligence and Machine Learning | 2022 - 2026</p>
+                        <p class="text-gray-400">CGPA: 8.2 (up to 6th semester)</p>
+                    </div>
+                    <div>
+                        <p class="text-lg font-bold">K. Pandyarajah Ballal Pre University College</p>
+                        <p class="text-gray-400">Pre-University Course (PUC) | 2020 - 2022</p>
+                        <p class="text-gray-400">Percentage: 73%</p>
+                    </div>
+                </div>
+
+                <!-- Certifications -->
+                <div class="mb-8">
+                    <h3 class="text-2xl font-semibold text-sky-400 mb-4">Certifications</h3>
+                    <ul class="list-disc list-inside text-gray-300 space-y-2">
+                        <li>CS50: Introduction to Computer Science – Harvard</li>
+                        <li>Machine Learning – Stanford</li>
+                        <li>Natural Language Processing</li>
+                    </ul>
+                </div>
+
+                <!-- Hackathons -->
+                <div class="mb-8">
+                    <h3 class="text-2xl font-semibold text-sky-400 mb-4">Hackathons</h3>
+                     <p class="text-gray-300">
+                        <span class="font-bold">Code Meet 2024 – Srinivas University:</span> Participated in a 24-hour hackathon organized by Srinivas University and IBM, collaborating on tech solutions and problem-solving.
+                    </p>
+                </div>
+
+                <!-- Download Button -->
+                <div class="text-center mt-12">
+                    <a href="shahil resume main.docx" download class="inline-block bg-sky-500 hover:bg-sky-600 text-white font-semibold px-8 py-4 rounded-lg transition-transform duration-300 transform hover:scale-105">
+                        Download Full Resume
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 scroll-animate">
+            <h2 class="text-3xl font-bold text-center mb-4">Get In Touch</h2>
+            <p class="text-center text-gray-400 mb-8 max-w-lg mx-auto">I'm currently open to new opportunities. If you have a project in mind or just want to say hi, feel free to reach out!</p>
+            <div class="text-center">
+                 <a href="mailto:ummerfarookshahil123@gmail.com" class="inline-block bg-sky-500 hover:bg-sky-600 text-white font-semibold px-8 py-4 rounded-lg transition-transform duration-300 transform hover:scale-105">
+                    Say Hello
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-800 mt-20">
+        <div class="container mx-auto px-6 py-6 text-center text-gray-500">
+            <p>&copy; 2024 Ummar Farook Shahil. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobile menu toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Typing effect
+            const nameElement = document.getElementById('typing-name');
+            const nameToType = "Ummar Farook Shahil";
+            let index = 0;
+            function type() {
+                if (index < nameToType.length) {
+                    nameElement.textContent += nameToType.charAt(index);
+                    index++;
+                    setTimeout(type, 100);
+                }
+            }
+            type();
+
+            // tsParticles animation
+            tsParticles.load("tsparticles", {
+                fpsLimit: 60,
+                interactivity: {
+                    events: {
+                        onHover: {
+                            enable: true,
+                            mode: "repulse",
+                        },
+                        resize: true,
+                    },
+                    modes: {
+                        repulse: {
+                            distance: 100,
+                            duration: 0.4,
+                        },
+                    },
+                },
+                particles: {
+                    color: {
+                        value: "#38bdf8",
+                    },
+                    links: {
+                        color: "#ffffff",
+                        distance: 150,
+                        enable: true,
+                        opacity: 0.1,
+                        width: 1,
+                    },
+                    collisions: {
+                        enable: true,
+                    },
+                    move: {
+                        direction: "none",
+                        enable: true,
+                        outModes: {
+                            default: "bounce",
+                        },
+                        random: false,
+                        speed: 1,
+                        straight: false,
+                    },
+                    number: {
+                        density: {
+                            enable: true,
+                            area: 800,
+                        },
+                        value: 50,
+                    },
+                    opacity: {
+                        value: 0.2,
+                    },
+                    shape: {
+                        type: "circle",
+                    },
+                    size: {
+                        value: { min: 1, max: 5 },
+                    },
+                },
+                detectRetina: true,
+            });
+
+            // Scroll animations
+            const animatedElements = document.querySelectorAll('.scroll-animate');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            animatedElements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+</body>
+</html>
+
